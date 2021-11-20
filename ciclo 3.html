@@ -1,0 +1,157 @@
+
+<html>
+<head>
+<title>Proyecto ciclo 3</title>
+<style>
+   *{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+  background-color: #000000;
+}
+header{
+	width: 100%;
+}
+
+.navegacion{
+	width: 1000px;
+	margin: 30px auto;
+	background: #fff;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: #CE7D35;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+.productos{  
+  width: 70%; 
+  height: auto;
+  margin: 40px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+  font-family: 'Open sans';
+  overflow: hidden;
+}
+
+.imagen-pan{
+  width: 200px; 
+  height: 120px;
+}
+
+.informacion{
+	display:inline-block;
+	vertical-align: text-top;
+	padding: 20;
+	float: left;
+}
+
+h3{
+  font-size: 16px; 
+  padding-bottom: 30px;
+  color: #0e0e0e;   
+}
+
+</style>
+</head>
+<body>
+
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="ciclo 3.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+	</nav>
+
+	<div class="productos">
+		<div class="informacion">
+			<img class="imagen-pan" src="img/pan1.jpg" height="100" alt="Pan de quesoS">
+		</div>
+
+		<div class="informacion">
+			<h3>Pan de queso</h3>
+			<h4>Precio: $12.000</h4>
+		</div>
+
+	</div>
+
+	<div class="productos">
+		<div class="informacion">
+			<img class="imagen-pan" src="img/pan2.jpg" height="100" alt="Pan de quesoS">
+		</div>
+
+		<div class="informacion">
+			<h3>Pan de mantequilla</h3>
+			<h4>Precio: $13.000</h4>
+		</div>
+	</div>
+
+	<div class="productos">
+		<div class="informacion">
+			<img class="imagen-pan" src="img/pan3.jpg" height="100" alt="Pan de quesoS">
+		</div>
+
+		<div class="informacion">
+			<h3>Pan de leche</h3>
+			<h4>Precio: $12.000</h4>
+		</div>
+	</div>
+
+</body>
+</html>

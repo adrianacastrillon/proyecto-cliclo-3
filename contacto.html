@@ -1,0 +1,288 @@
+
+<html>
+<head>
+<title>Proyecto ciclo 3</title>
+<style>
+   *{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+header{
+	width: 100%;
+}
+
+.navegacion{
+	width: 1000px;
+	margin: 30px auto;
+	background: #fff;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: #CE7D35;
+	transition: all .3s;
+}
+
+
+body{
+  height: 100%; 
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #000000; 
+}
+
+
+.contact_form{  
+  width: 70%; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+
+input{
+  background-color: #fbfbfb; 
+  width: 90%; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #000000; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+textarea{
+  background-color: #fbfbfb; 
+  width: 90%; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #000000; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+
+label{
+  display: block; 
+  float: center;  
+}
+
+
+button{
+  height: 45px; 
+  padding-left: 5px;
+  padding-right: 5px;   
+  margin-bottom: 20px; 
+  margin-top: 10px;   
+  text-transform: uppercase;
+  background-color: #000000; 
+  border-color: #000000; 
+  border-style: solid; 
+  border-radius: 10px;  
+  width: 420px;   
+  cursor: pointer;
+}
+
+
+button p{
+  color: #fff; 
+}
+
+
+span{
+  color: #000000; 
+}
+
+
+.aviso{
+  font-size: 13px;  
+  color: #0e0e0e;  
+}
+
+h3{
+  font-size: 16px; 
+  padding-bottom: 30px;
+  color: #0e0e0e;   
+}
+
+
+p{
+  font-size: 14px; 
+  color: #0e0e0e; 
+}
+
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+
+.formulario input:focus{
+  outline:0;
+  border: 1px solid #aaaaaa;
+}
+
+
+.formulario textarea:focus{
+  outline:0;
+  border: 1px solid #aaaaaa;
+}
+
+
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+</style>
+<script type="text/javascript">
+
+	const contactos = [];
+
+	function enviar_formulario(){
+		
+		var nombre = document.getElementById('nombre').value;
+		var telefono = document.getElementById('telefono').value;
+		var email = document.getElementById('email').value;
+		var asunto = document.getElementById('asunto').value;
+		var mensaje = document.getElementById('mensaje').value;
+
+		const contactoActual = {
+			nombre,
+			telefono,
+			email,
+			asunto,
+			mensaje
+		};
+		contactos.push(contactoActual);
+
+		var mensaje = 'Estimado/a '+nombre+' gracias por tu mensaje, nos pondremos en contacto al email '+email;
+
+		if(telefono != null && telefono != ''){
+			mensaje = mensaje +  ' o al telefono '+telefono;
+		}
+
+		window.alert(mensaje);	
+	}
+	console.log(contactos);
+	
+</script>
+</head>
+<body>
+
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="ciclo 3.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+	</nav>
+	
+	<div class="contact_form">
+		<div class="formulario">     
+			<h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+			  <form>       
+	
+					<p>
+					  <label for="nombre" class="colocar_nombre">Nombre
+						<span class="obligatorio">*</span>
+					  </label>
+						<input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+					</p>
+				  
+					<p>
+					  <label for="email" class="colocar_email">Email
+						<span class="obligatorio">*</span>
+					  </label>
+						<input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+					</p>
+				
+					<p>
+					  <label for="telefone" class="colocar_telefono">Teléfono
+					  </label>
+						<input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+					</p>    
+				  
+					<p>
+					  <label for="asunto" class="colocar_asunto">Asunto
+						<span class="obligatorio">*</span>
+					  </label>
+						<input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
+					</p>    
+				  
+					<p>
+					  <label for="mensaje" class="colocar_mensaje">Mensaje
+						<span class="obligatorio">*</span>
+					  </label>                     
+										<textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+									</p>                    
+				  
+					<button type="submit" name="" id="enviar" onclick='enviar_formulario()'><p>Enviar</p></button> 
+				
+			  </form>
+		</div>  
+	  </div>
+
+</body>
+</html>

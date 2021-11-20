@@ -1,0 +1,132 @@
+
+<html>
+<head>
+<title>Proyecto ciclo 3</title>
+<style>
+   *{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+header{
+	width: 100%;
+}
+
+.navegacion{
+	width: 1000px;
+	margin: 30px auto;
+	background: #fff;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: #CE7D35;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+.historia{  
+  width: 70%; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+  font-family: 'Open sans';
+}
+
+h3{
+  font-size: 16px; 
+  padding-bottom: 30px;
+  color: #0e0e0e;   
+}
+
+
+</style>
+</head>
+<body>
+
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="ciclo 3.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <!--
+            <li><a href="#">Servicios</a>
+                <ul class="submenu">
+                    <li><a href="#">Servicio #1</a></li>
+                    <li><a href="#">Servicio #2</a></li>
+                    <li><a href="#">Servicio #3</a></li>
+                </ul>
+            </li>-->
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+	</nav>
+	
+
+	<div class="historia">
+
+		<h3>Nuestra Historia</h3>
+
+		El pan nació el día en que el hombre se dio cuenta de que, con la masa que había fermentado de forma natural, se podían hacer las tortas y darles un sabor y una textura nuevos.
+		Aún en la actualidad, el pan sigue siendo un alimento sencillo e indispensable, así como el aire que respiramos o el agua que bebemos. ¡Es un alimento básico en muchos países! Hoy en día, gracias a la vuelta de los valores tradicionales y del placer de cocinar, el buen pan «casero» se convierte en un placer para infinidad de consumidores, que se divierten variando hasta el infinito las numerosas recetas de panes, todas ellas sabrosas, a veces sorprendentes y muy diferentes de un país a otro.
+		Gracias a una amplia selección de ingredientes, entre los cuales destacan las harinas, elaboradas respetando el medio ambiente, y al afán de imitar los gestos del panadero – poniendo las «manos en la masa» – los consumidores descubren una auténtica pasión: la de hacer su propio pan, ¡a mano o a máquina!
+
+
+	</div>
+
+</body>
+</html>
